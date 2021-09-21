@@ -214,11 +214,11 @@ begin
     Qry_Temp.Close;
     ITEM_ID := Cds_PedidoItemIDPEDIDOITEM.Value + 1;
   end
-  ELSE
-  BEGIN
+  else
+  begin
     Cds_PedidoItemIDPEDIDOITEM.Value := ITEM_ID;
     inc(ITEM_ID);
-  END;
+  end;
 end;
 
 procedure TFrmPedido.Cds_PedidoItemQUANTIDADEValidate(Sender: TField);
