@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/01/05 17:21:51.000.558,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/01/12 19:45:19.000.305,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/20 15:55:53.000.406,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/20 15:57:58.000.628,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/20 15:58:05.000.684,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 15:58:24.000.986,C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaTroco.pas=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 15:58:53.000.155,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 15:58:59.000.335,C:\Users\Administrador\Desktop\VIASOFT\Q1\uTroco.pas=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 15:59:21.000.793,=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 15:59:43.000.156,C:\Users\Administrador\Desktop\VIASOFT\Q1\uInterfaceMaquina.pas=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2021/09/20 16:03:09.000.643,C:\Users\Administrador\Desktop\VIASOFT\Q1\uTeste.dfm=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/09/20 16:03:09.000.643,C:\Users\Administrador\Desktop\VIASOFT\Q1\uTeste.pas=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/09/20 16:03:15.000.440,C:\Users\Administrador\Desktop\VIASOFT\Q1\Project1.dproj=C:\Users\Administrador\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/09/20 16:10:22.000.071,C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaTroco.pas=C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaDinheiro.pas</Transaction>
+    <Transaction>2021/09/20 16:10:40.000.824,C:\Users\Administrador\Desktop\VIASOFT\Q1\uTroco.pas=C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquina.pas</Transaction>
+    <Transaction>2021/09/20 16:12:05.000.569,C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquina.pas=</Transaction>
+    <Transaction>2021/09/20 16:12:35.000.727,=C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquina.pas</Transaction>
+    <Transaction>2021/09/20 16:14:04.000.109,C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaDinheiro.pas=</Transaction>
+    <Transaction>2021/09/20 16:15:02.130,=C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaDinheiro.pas</Transaction>
+    <Transaction>2021/09/20 16:15:02.134,=C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaTroco.pas</Transaction>
+    <Transaction>2021/09/20 16:15:46.920,C:\Users\Administrador\Desktop\VIASOFT\Q1\uMaquinaTroco.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

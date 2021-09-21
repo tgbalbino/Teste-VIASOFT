@@ -1,0 +1,44 @@
+
+
+CREATE TABLE ITEM (
+    IDITEM    INTEGER NOT NULL,
+    DESCITEM  VARCHAR(100)
+);
+
+
+CREATE TABLE PEDIDOCAB (
+    IDPEDIDOCAB  INTEGER NOT NULL,
+    DTEMISSAO    DATE,
+    NUMERO       INTEGER,
+    CLIENTE      VARCHAR(100)
+);
+
+
+CREATE TABLE PEDIDOITEM (
+    IDPEDIDOITEM  INTEGER NOT NULL,
+    IDPEDIDOCAB   INTEGER NOT NULL,
+    IDITEM        INTEGER NOT NULL,
+    QUANTIDADE    DOUBLE PRECISION,
+    VALORUNIT     DOUBLE PRECISION,
+    VALORTOTAL    DOUBLE PRECISION
+);
+
+
+
+
+/******************************************************************************/
+/****                             Primary keys                             ****/
+/******************************************************************************/
+
+ALTER TABLE ITEM ADD CONSTRAINT PK_ITEM PRIMARY KEY (IDITEM);
+ALTER TABLE PEDIDOCAB ADD CONSTRAINT PK_PEDIDOCAB PRIMARY KEY (IDPEDIDOCAB);
+ALTER TABLE PEDIDOITEM ADD CONSTRAINT PK_PEDIDOITEM PRIMARY KEY (IDPEDIDOITEM);
+
+
+/******************************************************************************/
+/****                             Foreign keys                             ****/
+/******************************************************************************/
+
+ALTER TABLE PEDIDOITEM ADD CONSTRAINT FK_PEDIDOITEM_CAB FOREIGN KEY (IDPEDIDOCAB) REFERENCES PEDIDOCAB (IDPEDIDOCAB)
+  USING INDEX FK_PEDIDO_ITEM;
+ALTER TABLE PEDIDOITEM ADD CONSTRAINT FK_PEDIDOITEM_ITEM FOREIGN KEY (IDITEM) REFERENCES ITEM (IDITEM);
