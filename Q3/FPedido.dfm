@@ -80,7 +80,7 @@ object FrmPedido: TFrmPedido
   object Edt_Cliente: TDBEdit
     Left = 104
     Top = 70
-    Width = 361
+    Width = 550
     Height = 21
     DataField = 'CLIENTE'
     DataSource = Dsr_Pedido
@@ -93,7 +93,7 @@ object FrmPedido: TFrmPedido
     Height = 416
     Align = alBottom
     Anchors = [akLeft, akTop, akRight, akBottom]
-    DataSource = Dsr__PedidoItem
+    DataSource = Dsr_PedidoItem
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -144,7 +144,6 @@ object FrmPedido: TFrmPedido
     Height = 31
     Align = alTop
     TabOrder = 5
-    ExplicitWidth = 827
     object btnIncluir: TBitBtn
       AlignWithMargins = True
       Left = 412
@@ -155,8 +154,6 @@ object FrmPedido: TFrmPedido
       Caption = 'Incluir'
       TabOrder = 0
       OnClick = btnIncluirClick
-      ExplicitLeft = 505
-      ExplicitHeight = 25
     end
     object btnAlterar: TBitBtn
       AlignWithMargins = True
@@ -168,8 +165,6 @@ object FrmPedido: TFrmPedido
       Caption = 'Alterar'
       TabOrder = 1
       OnClick = btnAlterarClick
-      ExplicitLeft = 586
-      ExplicitHeight = 25
     end
     object btnExcluir: TBitBtn
       AlignWithMargins = True
@@ -181,8 +176,6 @@ object FrmPedido: TFrmPedido
       Caption = 'Excluir'
       TabOrder = 2
       OnClick = btnExcluirClick
-      ExplicitLeft = 667
-      ExplicitHeight = 25
     end
     object btnSalvar: TBitBtn
       AlignWithMargins = True
@@ -194,8 +187,6 @@ object FrmPedido: TFrmPedido
       Caption = 'Salvar'
       TabOrder = 3
       OnClick = btnSalvarClick
-      ExplicitLeft = 748
-      ExplicitHeight = 25
     end
     object BitBtn1: TBitBtn
       AlignWithMargins = True
@@ -242,7 +233,6 @@ object FrmPedido: TFrmPedido
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 4
       OnClick = BitBtn1Click
-      ExplicitHeight = 25
     end
     object BitBtn2: TBitBtn
       AlignWithMargins = True
@@ -289,7 +279,6 @@ object FrmPedido: TFrmPedido
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 5
       OnClick = BitBtn2Click
-      ExplicitHeight = 25
     end
     object BitBtn3: TBitBtn
       AlignWithMargins = True
@@ -336,7 +325,6 @@ object FrmPedido: TFrmPedido
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 6
       OnClick = BitBtn3Click
-      ExplicitHeight = 25
     end
     object BitBtn4: TBitBtn
       AlignWithMargins = True
@@ -383,11 +371,9 @@ object FrmPedido: TFrmPedido
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 7
       OnClick = BitBtn4Click
-      ExplicitHeight = 25
     end
   end
   object Sds_Pedido: TSQLDataSet
-    Active = True
     CommandText = 'Select * from PEDIDOCAB'
     MaxBlobSize = -1
     Params = <>
@@ -511,7 +497,7 @@ object FrmPedido: TFrmPedido
       Size = 100
     end
   end
-  object Dsr__PedidoItem: TDataSource
+  object Dsr_PedidoItem: TDataSource
     DataSet = Cds_PedidoItem
     Left = 352
     Top = 184

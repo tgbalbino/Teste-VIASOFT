@@ -1,4 +1,5 @@
 *.dcu
 Q1/__history/.*
-Q3/__history/.*
+Q3/__history/*.*
 
+Q3/__history/FPedido.pas.~9~

@@ -15,7 +15,7 @@ type
     Dsr_Pedido: TDataSource;
     Cds_Pedido: TClientDataSet;
     Cds_PedidoItem: TClientDataSet;
-    Dsr__PedidoItem: TDataSource;
+    Dsr_PedidoItem: TDataSource;
     Dsp_PedidoItem: TDataSetProvider;
     Sds_PedidoItem: TSQLDataSet;
     Sds_PedidoIDPEDIDOCAB: TIntegerField;
@@ -77,6 +77,7 @@ type
     procedure Cds_PedidoItemBeforePost(DataSet: TDataSet);
     procedure Cds_PedidoBeforePost(DataSet: TDataSet);
   private
+    ITEM_ID :Integer;
     { Private declarations }
   public
     { Public declarations }
@@ -186,6 +187,7 @@ end;
 
 procedure TFrmPedido.Cds_PedidoItemIDITEMValidate(Sender: TField);
 begin
+  Qry_Temp.Close;
   Qry_Temp.CommandText := 'SELECT DESCITEM from ITEM where IDITEM= ' + Sender.AsString;
   Qry_Temp.Open;
 
@@ -203,10 +205,20 @@ end;
 
 procedure TFrmPedido.Cds_PedidoItemNewRecord(DataSet: TDataSet);
 begin
-  Qry_Temp.CommandText := 'SELECT coalesce(MAX(IDPEDIDOITEM), 0) +1 as ID from PEDIDOITEM ';
-  Qry_Temp.Open;
-  Cds_PedidoItemIDPEDIDOITEM.Value := Qry_Temp.FieldByName('ID').AsInteger;
-  Qry_Temp.Close;
+  if Cds_PedidoItem.RecordCount = 0 then
+  begin
+    Qry_Temp.Close;
+    Qry_Temp.CommandText := 'SELECT coalesce(MAX(IDPEDIDOITEM), 0) +1 as ID from PEDIDOITEM ';
+    Qry_Temp.Open;
+    Cds_PedidoItemIDPEDIDOITEM.Value := Qry_Temp.FieldByName('ID').AsInteger;
+    Qry_Temp.Close;
+    ITEM_ID := Cds_PedidoItemIDPEDIDOITEM.Value + 1;
+  end
+  ELSE
+  BEGIN
+    Cds_PedidoItemIDPEDIDOITEM.Value := ITEM_ID;
+    inc(ITEM_ID);
+  END;
 end;
 
 procedure TFrmPedido.Cds_PedidoItemQUANTIDADEValidate(Sender: TField);
@@ -221,6 +233,7 @@ end;
 
 procedure TFrmPedido.Cds_PedidoNewRecord(DataSet: TDataSet);
 begin
+  Qry_Temp.Close;
   Qry_Temp.CommandText := 'SELECT coalesce(MAX(IDPEDIDOCAB), 0) +1 as ID from PEDIDOCAB ';
   Qry_Temp.Open;
   Cds_PedidoIDPEDIDOCAB.Value := Qry_Temp.FieldByName('ID').AsInteger;
